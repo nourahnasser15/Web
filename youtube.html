@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="arabic">
+  <head>
+       <meta charset="UTF-8" />
+       <title> Youtube</title>
+	   <link href="style.css" rel="stylesheet" type="text/css" media="screen"/>
+       
+</head>
+<body>
+	<div id="tfheader">
+	
+		<div id ="leftstyle">
+	   <a href="https://www.facebook.com/nooon992"><img src="Images/fb.png" width="30" height="30" alt="Facebook" /></a>
+        <a href="https://twitter.com/_nourah_92"><img src="Images/twitter.jpg" width="30" height="30" alt="Twitter" /></a>
+        <a href="http://plus.google.com/nooon992"><img src="Images/google.png" width="30" height="30" alt="Goofle Plus" /></a>
+       
+        </div>
+		
+	 <div class="tfclear"></div>
+	 
+	</div>
+	
+     <div id="main"
+          <div id="header">
+		    <div id="tagline">
+                 <h1>عالم التقنية</h1>
+             </div>
+			 <div style="clear:both"></div>
+			 
+              <ul id="menu">
+                <li><a href="web Project.html">الرئيسية</a></li>
+                <li><a href="News.html">الأخبار</a></li>
+                <li><a href="Articles.html">المقالات</a></li>
+                <li><a href="devicesPreview.html">مراجعات الأجهزة</a></li>
+              </ul>
+			  <div id ="nav">
+			 </div>
+			 <div style="clear:both"></div>
+          </div><!--end header -->
+     
+          <div id="content">
+		  <div id="sidebar">
+			<p>الإعلانات</p>
+			<hr> 
+			<a href="https://www.yamsafer.me/?ref=tech#/"><img src="Images/ad.png" width="310" height="150" alt="Ads" /></a>
+			  <p> الأحداث</p>
+			  <hr>
+			  <!--<p>
+			  <label>Date:
+			  <input type="date"/>-->
+		    <iframe src="https://www.google.com/calendar/embed?title=calender%20&amp;showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=200&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=std.qu.edu.sa_8ehtql0v73t0ihibcv609u0v7k%40group.calendar.google.com&amp;color=%23182C57&amp;ctz=Asia%2FRiyadh" 
+			style=" border-width:0 " width="300" height="200" frameborder="0" scrolling="no"></iframe>
+          </div><!--end sidebar-->
+		   <p><a href="Web%20Project.html">الرئيسية</a>/<a href="Articles.html">المقالات</a>/يوتيـــوب</p>		
+		
+              <hr style ="width:900px; margin-right:10px;">		
+              <br>
+			   
+               <h4>يوتـــيوب _ Youtube</h4>
+			   <p> <img src = "C:\Users\Toshiba\Documents\الدراسة\web project4\web project\Images\youtube.jpg"  width="800" height="250"></p>
+			  <h4>
+<br> 
+موقع طبعا غني عن التعريف وهو الموقع الأول عالميا في مشاركة الفيديو وحيث أنّ هناك شخص اشتهر فقط بمقولة “Gangnam Style”<br>
+ بينما بقية الأغنية غير مفهومة للغالبية العظمى <br> <br> 
+أولاً نستعرض ما الذي يستخدم في يوتيوب..<br>
+ <br>
+Python : يوتيوب من أكبر مستخدمي هذه اللغة قبل و بعد عملية استحواذها من قبل google <br> 
+Linux : لا شيء غريب هنا هو النظام الأول في مثل هذه المواقع الكبرى.<br>
+MySQL : أشهر قواعد البيانات على الإطلاق. <br>
+Go: لغة برمجة تم عملها من قبل Google، ويتم استخدامها في يوتيوب<br>
+بشكل خفيف و لكن عليها إقبال في الفترة الحالية. <br>
+ Apache : خادم الويب المعروف.<br>
+BigTable : قاعدة بيانات لا تعتمد على SQL.<br>
+ وأدوات اخرى…<br>
+<br>
+ماذا يحدث حينما أشاهد فيديو؟<br>
+ <br>
+حينما تضغط على فيديو ما و تريد أن تشاهده ترى رابط كهذا http://www.youtube.com/watch?v=3PwJAJ3fkZQ  <br>
+ 
+قد تقول أن 3PwJAJ3fkZQ تمثل تعريف الفيديو في قاعدة البيانات لكن هذا تعريف مبنى على ترميز من نوع Base64<br>
+ معدل من قبل فريق يوتيوب وعلى الأرجح أن يكون حقل تعريف الفيديو في قاعدة البيانات من نوع GUID. <br>
+ <br>
+إذن ما يحصل هو عملية فك هذا الترميز واستعلام التعريف الأصلي في قاعدة البيانات وجلب بيانات الفيديو<br>
+ ( مثل وصف الفيديو + التعليقات + عنوان الفيديو و غيرها ) لكن الفيديو لا يخزّن داخل قاعدة البيانات.<br>
+ طبعا أيضا يوتيوب تعمل Sharding لقواعد بياناتها.<br>
+ <br>
+لماذا نسخة معدلة من Base64؟
+ <br>
+السبب بسيط لأن معظم اللغات تستطيع فك هذا الترميز لأنه ترميز معتمد، مثلاً في بايثون بالإمكان عملية فك التميز<br>
+ في أقل من 4 أسطر،وحينما يتم فك الترميز بالإمكان عمل Spam بتعديلات بسيطة على هذا التعريف، ولذلك رأى فريق <br>
+ المبرمجين أن يتم عمل نسخة معدلةمنه لتفادي هذه المشكلة. الفيديوات الأكثر شهرة ومتابعة يتم نقلها إلى CDN <br>
+ خاص بجوجل لتسهيل عملية نقلها و مشاهدتها<br> 
+ <br>
+ هنا تصور مبسط للهيكل الداخلي لهذا العمل:<br><br>
+  <img src ="images/dp.jpg" height="200" width="300" />
+<br><br>
+ ما الذي يحدث حينما أرفع فيديو؟<br><br>
+ 
+تحدث أشياء كثيرة ومهمة مثل عملية ضغط الفيديو Video Compression وهذا يصغر مساحة الفيديو بشكل واضح<br>
+ وأيضا يقلل من جودة الفيديو لكن ليس بالشكل الواضح طبعا معظم وأشهر خوارزميات ضغط الفيديو تعتبر من<br>
+ خوارزميات الضغط الفاقدة للبيانات ومثال معروف هو MPEG وتتم مقارنة كل فريم في الفيديو ويتم ضغط البكسلات <br>
+ المتشابهة وذلك يضمن عدم تكرارها في كل فريم و طبعا لا تكون ملاحظة وقت حركة الفيديو.<br>
+<br><br>
+ 
+ 
+أيضا تكون هناك عملية إنشاء أكثر من Thumbnails (صور مصغرة) للفيديو المرفوع لإبرازها حين البحث <br>
+عن هذا الفيديو وهذه عملية صعبة خصوصا في تخزينها بسبب العدد المهول جدا للمقاطع الفيديو المرفوعة في الدقيقة،<br>
+ وكانت هناك مشاكل في التخزين بسبب نظلم ملفات Ext3 حيث لا تسمح بتجاوز مساحة معينة لمجلد ما ولكن عملية الاستحواذ<br>
+ من جوجل عززت هذا الأمر، حيث أصبح بالإمكان استخدام BigTable حيث هي مبنية على نظام ملفات GFS وتكون البيانات مضغوطة<br>
+ فيها وفيها ميزة تفادي الأخطاء فهذا أصبح منقذ لهم.<br><br>
+ 
+ 
+ <br><br>
+كيف يتم التعرف على فئة الفيديو؟
+ <br><br>
+قد يدخل المستخدم فئة أو وسم (Tags) الفيديو المرفوع لكن هذا ليس الحال في كل عملية رفع ولذلك يجب أن تكون <br>
+هذه العملية تقام بشكل اوتوماتيكي و بدون تدخل بشري، إذن مرحبا بـMachine Learning حيث تم بناء وتدريب نظام<br>
+ لاقتراح الوسوم عن طريق محتوى الفيديو وأيضا ربطها مع نتائج فئات من الويب طبعا بمحرك بحث جوجل.<br>
+ <br><br>
+ 
+ 
+ 
+تم استخدام أكثر من ٢٠ ألف فيديو لتدريب النظام، والتدريب هنا يعني إعطاء النظام مجموعة من القيم وأيضا مجموعة<br>
+ من النتائج كل يتم التعلم والمقارنة منها، في البحث يتم معالجة كل Frame في الفيديو (تقريبا يعالج ٤٥ Frame كل ثانية) <br>
+ وأيضا يعالج الصوت وبالتالي في حالة الصورة ان اكتشف صورة ببغاء مثلا قد يقترح ببغاء لكن ما دور الفئات؟ تستخدم لتحسين البحث <br>
+ فمثلا “ببغاء” هي من فئة “الطيور” وهي تجمع أكثر من نوع من الطيور بالتالي يكون لها أفضلية في البحث وانتشار اكبر في نواتج <br>
+ البحث وهنا صورة بسيطة لتوضيح عملية النظام:<br><br>
+ 
+ 
+  <img src ="images/ddp.png" height="300" width="400" />
+
+ 
+ 
+ 
+ </p> 
+ 
+ 
+ 
+          </div><!--end content-->
+     
+		  
+	</div><!--end main-->
+    
+    <div id="footer">
+	    <div class="container">
+		<br>
+		<br>
+		 <hr color= #330033
+            <p>&copy; كافة الحقوق محفوظة 2014-2015 &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;<a href="#">About Us</a></p>
+			 
+			 </div>
+		</div><!--end footer container-->
+    </div><!--end footer-->
+      
+  </body> 
+  
+
+</html>
