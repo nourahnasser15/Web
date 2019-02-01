@@ -1,4 +1,8 @@
-## website about technology News in Arabic
-###it's Project for Web Subject.
-## My website consist of pages about latest mobile newst , tablest and section about general technology news.
-## Home Page is WebPorject.html :=)
+# Web Project
+  Project for  Web  Subject
+by Norah Aaljlan
+
+## Idea of the project
+Website for Technology news in arabic, contain many section like monbil news, application for mobile news and general technology news
+ 
+> Note: HomePage is Webproject.html
